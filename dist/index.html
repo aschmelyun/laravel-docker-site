@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Develop and Deploy Laravel Applications with Docker</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Follow along as I show you how to develop, test, and deploy a fully-featured Laravel application with Docker and Docker Compose.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Develop and Deploy Laravel Applications with Docker" />
+    <meta property="og:description" content="Follow along as I show you how to develop, test, and deploy a fully-featured Laravel application with Docker and Docker Compose." />
+    <meta property="og:url" content="https://laraveldocker.com/" />
+    <meta property="og:site_name" content="laraveldocker.com" />
+    <meta property="og:image" content="https://laraveldocker.com/assets/images/laraveldocker-preview-image.png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Follow along as I show you how to develop, test, and deploy a fully-featured Laravel application with Docker and Docker Compose." />
+    <meta name="twitter:title" content="Develop and Deploy Laravel Applications with Docker" />
+    <meta name="twitter:site" content="@aschmelyun" />
+    <meta name="twitter:image" content="https://laraveldocker.com/assets/images/laraveldocker-preview-image.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <meta name="theme-color" content="#2d3748">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css?id=a5f73fff8dea2360d728">
+    <link
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;600i;700&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;600i;700&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+</head><body class="antialiased ">
+<div class="bg-gradient-to-br from-indigo-800 to-blue-700 pt-8 pb-24 lg:pt-20 lg:pb-32">
+    <div class="container mx-auto">
+        <div class="flex w-10/12 lg:w-3/5 mx-auto">
+            <div class="w-full lg:w-3/5">
+                <h1 class="text-white text-4xl lg:text-5xl leading-tight font-light">Develop and Deploy <strong class="font-bold">Laravel</strong> Applications with <strong class="font-bold">Docker</strong></h1>
+                <p class="text-gray-300 text-lg leading-relaxed pt-6 pb-8">Learn how to use the power of Docker to <strong class="font-semibold text-white">develop, test, and deploy</strong> Laravel applications in environments ranging from your local machine to a production server.</p>
+                <div class="flex items-center">
+                    <a href="https://gumroad.com/l/cwYKw" data-gumroad-single-product="true" class="block bg-white text-red-500 uppercase font-semibold py-3 px-8 text-lg rounded-md transition duration-300 ease-in-out hover:shadow-md">Pre-order Now</a>
+                    <span class="block text-xl ml-3">👈 </span>
+                    <span class="block lg:hidden text-gray-300 text-lg">&nbsp;&nbsp;only <strong class="font-semibold text-white">$19</strong></span>
+                    <span class="hidden lg:block text-gray-300 text-lg">&nbsp;&nbsp;only <strong class="font-semibold text-white">$19</strong> until release!</span>
+                </div>
+            </div>
+            <div class="hidden lg:block w-2/5">
+                <div class="icon relative" style="width:152px; height:152px;">
+                    <div class="svg absolute">
+                        <svg width="152" height="149" viewBox="0 0 152 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M138.7 12.7C151.1 24.8 152.8 47.9 151.7 69.9C150.6 91.9 146.7 112.9 134.3 126.9C121.9 141 100.9 148.2 80.1 148.2C59.2 148.1 38.4 140.8 23.4 126.7C8.3 112.6 -0.900004 91.8 0.399996 72.3C1.6 52.7 13.4 34.4 28.4 22.4C43.4 10.3 61.7 4.4 82.4 2C103.1 -0.399997 126.2 0.600003 138.7 12.7Z" fill="black" fill-opacity="0.15"/>
+                        </svg>
+                    </div>
+                    <img class="inline-block absolute left-0 top-0 bottom-0 right-0 m-auto" src="/assets/images/icon-laravel.png" width="96">
+                </div>
+                <div class="icon relative float-right" style="width:165px; height:165px;">
+                    <div class="svg absolute">
+                        <svg width="165" height="163" viewBox="0 0 165 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M142.105 30.1327C157.235 46.7633 166.883 67.4689 164.69 85.9719C162.497 104.475 148.464 120.775 133.333 134.872C118.094 148.97 101.867 160.865 83.7765 162.737C65.686 164.609 45.8413 156.349 29.834 142.252C13.7171 128.154 1.54711 108.219 0.1218 86.7428C-1.19387 65.3763 8.2351 42.6882 24.2424 26.0576C40.3594 9.42699 62.945 -0.925841 84.6536 0.065388C106.253 1.05662 126.865 13.502 142.105 30.1327Z" fill="black" fill-opacity="0.15"/>
+                        </svg>
+                    </div>
+                    <img class="inline-block absolute left-0 top-0 bottom-0 right-0 m-auto" src="/assets/images/icon-docker.png" width="128">
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="container mx-auto">
+    <div class="flex w-10/12 lg:w-3/5 mx-auto bg-white rounded-xl -mt-12 shadow-lg">
+        <div class="w-1/3 text-center pt-3 pb-4">
+            <span class="block text-4xl lg:text-5xl font-bold leading-none text-red-500">24</span>
+            <p class="text-base lg:text-lg text-gray-600">Videos</p>
+        </div>
+        <div class="w-1/3 text-center pt-3 pb-4 border border-gray-300 border-t-0 border-b-0">
+            <span class="block text-4xl lg:text-5xl font-bold leading-none text-red-500">10+</span>
+            <p class="text-base lg:text-lg text-gray-600">Hours<span class="hidden lg:inline"> of Content</span></p>
+        </div>
+        <div class="w-1/3 text-center pt-3 pb-4">
+            <span class="block text-4xl lg:text-5xl font-bold leading-none text-red-500">1</span>
+            <p class="text-base lg:text-lg text-gray-600"><span class="hidden lg:inline">Complete </span>Package</p>
+        </div>
+    </div>
+</div><div class="container mx-auto mt-8 mb-12 lg:mb-24">
+    <div class="w-10/12 lg:w-3/5 mx-auto">
+        <section class="text-lg text-gray-600 leading-relaxed mb-12">
+    <h2 class="text-3xl text-gray-800 font-bold pb-3 leading-snug lg:leading-relaxed">Docker and Laravel work together in a <span class="fancy-underline">perfect marriage</span></h2>
+    <p class="pb-6">Docker, and more broadly containerization as a whole, is growing in popularity, not just for production environments but also for local development. Laravel is the leading modern PHP framework used by millions of developers around the globe. <strong class="text-gray-800 font-semibold">Together, they help develop and deploy web applications that are fast, scalable, and OS independent.</strong></p>
+    <div class="flex w-full lg:w-4/5 mx-auto mb-6 bg-gray-200 rounded-lg py-6 px-8 text-lg text-gray-600 leading-relaxed italic font-semibold">&ldquo;I just upgraded my OS on my laptop and it broke MySQL in my local development environment.&rdquo;</div>
+    <p class="pb-6"><strong class="text-gray-800 font-semibold">Working with a LAMP stack or other web server software installed on your local machine can be a nightmare when it comes time to upgrade.</strong> If you have multiple apps that require different versions of something like PHP it's even worse. Using Docker to build your local dev environment removes the headache of maintaining and installing dependencies for web server software across your machines.</p>
+    <div class="flex w-full lg:w-4/5 mx-auto mb-6 bg-gray-200 rounded-lg py-6 px-8 text-lg text-gray-600 leading-relaxed italic font-semibold">&ldquo;I have absolutely no clue how to get started deploying my Laravel app to a production server with Docker.&rdquo;</div>
+    <p>That's okay, there's a lot of options! <strong class="text-gray-800 font-semibold">In this course, we'll explore a few different methods to deploy your Dockerized Laravel application onto a production server.</strong> Including how to setup and use an automated testing and CI/CD service like CircleCI.</p>
+</section>        <section class="text-lg text-gray-600 leading-relaxed mb-12">
+    <h2 class="text-3xl text-gray-800 font-bold pb-3 leading-snug lg:leading-relaxed">Full course includes <span class="fancy-underline">24 videos</span></h2>
+    <ul class="text-lg text-gray-800 font-normal">
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">1.</span> Introduction to Docker and Docker Compose</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">2.</span> Installing Docker on your local machine</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">3.</span> Setting up Nginx</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">4.</span> Setting up Apache (alternative to Nginx)</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">5.</span> Setting up MySQL</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">6.</span> Setting up and configuring PHP</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">7.</span> Installing and using Composer</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">8.</span> Creating a new Laravel app</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">9.</span> Setting up and using Artisan</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">10.</span> Setting up and using NPM</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">11.</span> Building a simple CRUD application for testing</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">12.</span> Creating tests for our example application</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">13.</span> Installing and running tests with PHPUnit</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">14.</span> Improving Docker performance and response time</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">15.</span> Enabling HTTPS locally with mkcert</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">16.</span> Caching with Redis</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">17.</span> Running jobs with Queues</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">18.</span> Running scheduled tasks</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">19.</span> Deploying an app manually with git</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">20.</span> Deploying an application with Docker Hub</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">21.</span> Using Let&#039;s Encrypt with a production Docker app</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">22.</span> Introduction to Kubernetes</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">23.</span> Deploying a clustered Laravel app with Kubernetes</li>
+                    <li class="bg-gray-200 py-3 px-4 border border-white border-l-0 border-r-0 border-t-0 text-base lg:text-lg"><span class="text-gray-500 font-bold">24.</span> CI/CD for a Dockerized app via CircleCI</li>
+            </ul>
+</section>        <section class="text-lg text-gray-600 leading-relaxed mb-12">
+    <div class="bg-gradient-to-br from-indigo-800 to-blue-700 rounded-xl pt-4 pb-6 px-6">
+        <div class="flex items-center flex-col lg:flex-row">
+            <div class="w-full lg:w-3/4">
+                <h2 class="text-3xl text-white font-bold pb-3 leading-snug lg:leading-relaxed">A little about <span class="fancy-underline">the instructor</span></h2>
+                <p class="text-gray-300 pb-4">Hey everyone, Andrew here! 👋</p>
+                <p class="text-gray-300 pb-4">I'm a full-stack PHP developer with 8+ years of experience. I've built, optimized, and maintained web applications large and small in Laravel for over 5 of those years.</p>
+                <p class="text-gray-300">You can catch me posting regularly on my YouTube channel or on my Dev.to blog where I show off brief tutorials for Laravel apps, Vue sites, and Docker. My GitHub also has a small selection of open source packages specifically for Laravel devs.</p>
+            </div>
+            <div class="w-1/2 lg:w-1/4 mt-4 lg:mt-0 text-center">
+                <img class="rounded-full border-4 border-white shadow-lg mx-auto" src="/assets/images/avatar.jpg" width="200">
+            </div>
+        </div>
+    </div>
+</section>        <section class="text-lg text-gray-600 leading-relaxed mb-6">
+    <h2 class="text-3xl text-gray-800 font-bold pb-6 leading-snug lg:leading-relaxed">Frequently Asked <span class="fancy-underline">Questions</span></h2>
+            <h5 class="text-lg text-gray-800 font-semibold pb-2 leading-none italic">What payment methods can I use?</h5>
+        <p class="pb-8">The course is made available through the service Gumroad. During checkout you can choose to use either a debit card, credit card, or Paypal account.</p>
+            <h5 class="text-lg text-gray-800 font-semibold pb-2 leading-none italic">What format are the course videos available in?</h5>
+        <p class="pb-8">After completing your purchase, you&#039;re given the choice between watching the videos directly on Gumroad, or downloading a zip archive containing all 24 videos in MP4 at standard full HD resolution.</p>
+            <h5 class="text-lg text-gray-800 font-semibold pb-2 leading-none italic">Is there a discount for teams?</h5>
+        <p class="pb-8">There is currently no discount or special licensing for teams. I anticipate course videos being shared with colleagues, although I&#039;d appreciate any additional purchases you make for your team.</p>
+            <h5 class="text-lg text-gray-800 font-semibold pb-2 leading-none italic">What if I don&#039;t like this course?</h5>
+        <p class="pb-8">I&#039;ve put a lot of time and energy into making this course useful for a wide variety of developers. However, if you feel you haven&#039;t legitimately learned anything from it please email me your reasoning and I will provide a full refund.</p>
+            <h5 class="text-lg text-gray-800 font-semibold pb-2 leading-none italic">Can I make a suggestion?</h5>
+        <p class="pb-8">Of course! If you have any concerns or questions about a video, or would like to suggest a topic that I didn&#039;t cover, please feel free to contact me using one of the methods below.</p>
+    </section>        <section class="text-lg text-gray-600 leading-relaxed mb-12">
+    <div class="bg-gray-200 rounded-xl pt-4 pb-6 px-6">
+        <h2 class="text-3xl text-gray-800 font-bold pb-3 leading-snug lg:leading-relaxed">Buy the <span class="fancy-underline">full course</span></h2>
+        <p class="text-gray-600 pb-4">You'll receive <strong class="text-gray-800 font-semibold">24 videos</strong> in HD, as well as <strong class="text-gray-800 font-semibold">full English transcripts</strong> and <strong class="text-gray-800 font-semibold">complete source code</strong> for every video.</p>
+        <p class="text-gray-600 pb-4">The full course releases on November 1st, pre-order now to save $10! After purchasing, you'll be notified when all of the materials will be available for you to download on the release date.</p>
+        <div class="text-center">
+            <a href="https://gumroad.com/l/cwYKw" data-gumroad-single-product="true" class="inline-block bg-gradient-to-br from-indigo-800 to-blue-700 text-white uppercase font-semibold py-3 px-8 text-lg rounded-md transition duration-300 ease-in-out hover:shadow-md">👉 Pre-order Now 👈</a>
+        </div>
+    </div>
+</section>        <section class="text-lg text-gray-600 leading-relaxed mb-6">
+    <h2 class="text-3xl text-gray-800 font-bold pb-4 leading-snug lg:leading-relaxed">If you want to get <span class="fancy-underline">in touch</span></h2>
+    <p class="pb-8">Have a question that wasn't answered on this site, or a comment about the course material? Feel free to contact me through my <a href="mailto:me@aschmelyun.com?subject=Question about the Laravel Docker course" class="text-gray-800 font-semibold">email</a> or by sending me a message on <a href="https://twitter.com/aschmelyun" target="_blank" class="text-gray-800 font-semibold">Twitter</a>.</p>
+</section>    </div>
+</div>
+</body>
+</html>
