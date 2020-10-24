@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="laraveldocker.com" />
     <meta property="og:image" content="https://laraveldocker.com/assets/images/laraveldocker-preview-image.png" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="{{ $description }}" />
     <meta name="twitter:title" content="{{ $title }}" />
     <meta name="twitter:site" content="@aschmelyun" />
