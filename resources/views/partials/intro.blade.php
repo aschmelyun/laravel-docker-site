@@ -5,7 +5,7 @@
                 <h1 class="text-white text-4xl lg:text-5xl leading-tight font-light">Develop and Deploy <strong class="font-bold">Laravel</strong> Applications with <strong class="font-bold">Docker</strong></h1>
                 <p class="text-gray-300 text-lg leading-relaxed pt-6 pb-8">Learn how to use the power of Docker to <strong class="font-semibold text-white">develop, test, and deploy</strong> Laravel applications in environments ranging from your local machine to a production server.</p>
                 <div class="flex items-center">
-                    <a href="https://gumroad.com/l/cwYKw" data-gumroad-single-product="true" rel="noreferrer" class="block bg-white text-red-500 uppercase font-semibold py-3 px-8 text-lg rounded-md transition duration-300 ease-in-out hover:shadow-md">Pre-order Now</a>
+                    <a href="https://gumroad.com/l/cwYKw" data-gumroad-single-product="true" rel="noreferrer" class="block bg-white text-red-500 uppercase font-semibold py-3 px-8 text-lg rounded-md transition duration-300 ease-in-out hover:shadow-md">Pre-order<span class="hidden lg:inline"> Now</span></a>
                     <span class="block text-xl ml-3">👈 </span>
                     <span class="block lg:hidden text-gray-300 text-lg">&nbsp;&nbsp;only <strong class="font-semibold text-white">$19</strong></span>
                     <span class="hidden lg:block text-gray-300 text-lg">&nbsp;&nbsp;only <strong class="font-semibold text-white">$19</strong> until release!</span>
