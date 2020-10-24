@@ -47,8 +47,8 @@
             "answer": "I've put a lot of time and energy into making this course useful for a wide variety of developers. However, if you feel you haven't legitimately learned anything from it please email me your reasoning and I will provide a full refund."
         },
         {
-            "question": "Can I make a suggestion?",
-            "answer": "Of course! If you have any concerns or questions about a video, or would like to suggest a topic that I didn't cover, please feel free to contact me using one of the methods below."
+            "question": "Can I view a sample video?",
+            "answer": "This course follows a very similar teaching and recording style to the Laravel and Docker videos found on my YouTube channel. If you would still like to preview a video from this course, email me at the address below and I will send you one of the included videos."
         }
     ]
 }
