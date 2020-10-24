@@ -8,7 +8,7 @@
                 <p class="text-gray-300">You can catch me posting regularly on my YouTube channel or on my Dev.to blog where I show off brief tutorials for Laravel apps, Vue sites, and Docker. My GitHub also has a small selection of open source packages specifically for Laravel devs.</p>
             </div>
             <div class="w-1/2 lg:w-1/4 mt-4 lg:mt-0 text-center">
-                <img class="rounded-full border-4 border-white shadow-lg mx-auto" src="/assets/images/avatar.jpg" width="200">
+                <img class="rounded-full border-4 border-white shadow-lg mx-auto" src="/assets/images/avatar.jpg" width="200" alt="Profile picture of Andrew Schmelyun">
             </div>
         </div>
     </div>
