@@ -1,4 +1,4 @@
 <section class="text-lg text-gray-600 leading-relaxed mb-6">
     <h2 class="text-3xl text-gray-800 font-bold pb-4 leading-snug lg:leading-relaxed">If you want to get <span class="fancy-underline">in touch</span></h2>
-    <p class="pb-8">Have a question that wasn't answered on this site, or a comment about the course material? Feel free to contact me through my <a href="mailto:me@aschmelyun.com?subject=Question about the Laravel Docker course" class="text-gray-800 font-semibold">email</a> or by sending me a message on <a href="https://twitter.com/aschmelyun" target="_blank" class="text-gray-800 font-semibold">Twitter</a>.</p>
+    <p class="pb-8">Have a question that wasn't answered on this site, or a comment about the course material? Feel free to contact me through my <a href="mailto:me@aschmelyun.com?subject=Question about the Laravel Docker course" class="text-gray-800 font-semibold">email</a> or by sending me a message on <a href="https://twitter.com/aschmelyun" target="_blank" rel="noreferrer" class="text-gray-800 font-semibold">Twitter</a>.</p>
 </section>
