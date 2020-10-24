@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.fancy-underline {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 7px;
+        width: 100%;
+        bottom: 9px;
+        left: 0;
+        opacity: 0.35;
+        background: #f56565;
+        z-index: -1;
+    }
+}
