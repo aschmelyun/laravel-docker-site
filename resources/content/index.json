@@ -4,8 +4,8 @@
     "title": "Develop and Deploy Laravel Applications with Docker",
     "description": "Follow along as I show you how to develop, test, and deploy a fully-featured Laravel application with Docker and Docker Compose.",
     "contents": [
-        "Introduction to Docker and Docker Compose",
-        "Installing Docker on your local machine",
+        "Introduction to Docker",
+	"Introduction to Docker Compose",
         "Setting up Nginx",
         "Setting up Apache (alternative to Nginx)",
         "Setting up MySQL",
@@ -13,21 +13,19 @@
         "Installing and using Composer",
         "Creating a new Laravel app",
         "Setting up and using Artisan",
-        "Setting up and using NPM",
+        "Setting up and using npm",
         "Building a simple CRUD application for testing",
         "Creating tests for our example application",
-        "Installing and running tests with PHPUnit",
-        "Improving Docker performance and response time",
+        "Running tests with PHPUnit in Docker",
+        "Improving local Docker performance",
         "Enabling HTTPS locally with mkcert",
         "Caching with Redis",
         "Running jobs with Queues",
         "Running scheduled tasks",
         "Deploying an app manually with git",
-        "Deploying an application with Docker Hub",
+        "Modifying git deployment for production environments",
         "Using Let's Encrypt with a production Docker app",
-        "Introduction to Kubernetes",
-        "Deploying a clustered Laravel app with Kubernetes",
-        "CI/CD for a Dockerized app via CircleCI"
+        "CI/CD with CircleCI and Docker"
     ],
     "faqs": [
         {
