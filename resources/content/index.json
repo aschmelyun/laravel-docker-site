@@ -5,7 +5,7 @@
     "description": "Follow along as I show you how to develop, test, and deploy a fully-featured Laravel application with Docker and Docker Compose.",
     "contents": [
         "Introduction to Docker",
-	"Introduction to Docker Compose",
+	    "Introduction to Docker Compose",
         "Setting up Nginx",
         "Setting up Apache (alternative to Nginx)",
         "Setting up MySQL",
@@ -15,15 +15,13 @@
         "Setting up and using Artisan",
         "Setting up and using npm",
         "Building a simple CRUD application for testing",
-        "Creating tests for our example application",
         "Running tests with PHPUnit in Docker",
         "Improving local Docker performance",
         "Enabling HTTPS locally with mkcert",
         "Caching with Redis",
         "Running jobs with Queues",
         "Running scheduled tasks",
-        "Deploying an app manually with git",
-        "Modifying git deployment for production environments",
+        "Deploying a Laravel application with git",
         "Using Let's Encrypt with a production Docker app",
         "CI/CD with CircleCI and Docker"
     ],
@@ -34,7 +32,7 @@
         },
         {
             "question": "What format are the course videos available in?",
-            "answer": "After completing your purchase, you're given the choice between watching the videos directly on Gumroad, or downloading a zip archive containing all 22 videos in MP4 at standard full HD resolution."
+            "answer": "After completing your purchase, you're given the choice between watching the videos directly on Gumroad, or downloading a zip archive containing all 20 videos in MP4 at standard full HD resolution."
         },
         {
             "question": "Is there a discount for teams?",
