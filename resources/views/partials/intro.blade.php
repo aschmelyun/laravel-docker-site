@@ -1,6 +1,6 @@
 <div class="bg-gradient-to-br from-indigo-800 to-blue-700 pt-8 pb-24 lg:pt-20 lg:pb-32">
     <div class="container mx-auto">
-        <div class="flex w-10/12 lg:w-3/5 mx-auto">
+        <div class="flex w-10/12 lg:w-2/3 mx-auto">
             <div class="w-full lg:w-3/5">
                 <h1 class="text-white text-4xl lg:text-5xl leading-tight font-light">Develop and Deploy <strong class="font-bold">Laravel</strong> Applications with <strong class="font-bold">Docker</strong></h1>
                 <p class="text-gray-300 text-lg leading-relaxed pt-6 pb-8">Learn how to use the power of Docker to <strong class="font-semibold text-white">develop, test, and deploy</strong> Laravel applications in local and production environments with this premium video course.</p>

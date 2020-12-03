@@ -1,5 +1,5 @@
 <div class="container mx-auto">
-    <div class="flex w-10/12 lg:w-3/5 mx-auto bg-white rounded-xl -mt-12 shadow-lg">
+    <div class="flex w-10/12 lg:w-2/3 mx-auto bg-white rounded-xl -mt-12 shadow-lg">
         <div class="w-1/3 text-center pt-3 pb-4">
             <span class="block text-4xl lg:text-5xl font-bold leading-none text-red-500">20</span>
             <p class="text-base lg:text-lg text-gray-600">Videos</p>
