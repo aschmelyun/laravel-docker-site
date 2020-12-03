@@ -42,4 +42,12 @@
         />
     </noscript>
     <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FC0V61HVJQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-FC0V61HVJQ');
+    </script>
 </head>
