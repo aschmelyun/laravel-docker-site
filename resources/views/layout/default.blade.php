@@ -2,6 +2,10 @@
 <html lang="en-US">
 @include('partials.head')
 <body class="antialiased {{ $bodyClasses ?? '' }}">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH2MK5X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 @include('partials.intro')
 @include('partials.cta')
 <div class="container mx-auto mt-8 mb-12 lg:mb-24">
