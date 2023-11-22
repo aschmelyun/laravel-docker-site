@@ -1,3 +1,8 @@
+<div class="bg-red-500 py-4">
+    <div class="container mx-auto">
+        <p class="text-base text-white text-center">Use the coupon code <span class="font-bold">BLACKFRIDAY</span> during checkout for 50% off!</p>
+    </div>
+</div>
 <div class="bg-gradient-to-br from-indigo-800 to-blue-700 pt-8 pb-24 lg:pt-20 lg:pb-32">
     <div class="container mx-auto">
         <div class="flex w-10/12 lg:w-2/3 mx-auto">

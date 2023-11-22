@@ -57,4 +57,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KH2MK5X');</script>
     <!-- End Google Tag Manager -->
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="THWDCUVK" defer></script>
+    <!-- / Fathom -->
 </head>
